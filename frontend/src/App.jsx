@@ -5,7 +5,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Header/Navbar';
 import Footer from './components/Header/Footer';
 import Home from './pages/Home';
-
+import SignUp from './components/Login/SignUp';
+import Login from './components/Login/Login';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -15,8 +18,11 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-       
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/register" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>

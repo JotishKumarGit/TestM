@@ -76,3 +76,28 @@
   text-align: center;
   font-size: 1rem;
 }
+
+/* About us secrions  */
+img {
+  transition: transform 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+
+/* For background image */
+.background-section {
+  background-image: url('/images-1.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Full screen height */
+  position: relative;
+}
+
+.overlay-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+  border-radius: 12px;
+}
+
