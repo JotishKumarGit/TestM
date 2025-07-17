@@ -13,21 +13,11 @@ const Navbar = () => {
                 </Link>
 
                 {/* Toggle for mobile */}
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
 
                 {/* Right: Nav Links */}
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul className="navbar-nav gap-3">
+                    <ul className="navbar-nav gap-2">
                         <li className="nav-item">
                             <Link className="nav-link text-dark fw-medium" to="/">Home</Link>
                         </li>
@@ -36,7 +26,7 @@ const Navbar = () => {
                         </li>
 
                         {/* Categories Dropdown */}
-                        <li className="nav-item dropdown">
+                        {/* <li className="nav-item dropdown">
                             <Link
                                 className="nav-link dropdown-toggle text-dark fw-medium"
                                 to="#"
@@ -60,16 +50,22 @@ const Navbar = () => {
                                     <Link className="dropdown-item" to="/categories/food"> Tea Coasters</Link>
                                 </li>
                             </ul>
+                        </li> */}
+                        <li className="nav-item">
+                            <Link className="nav-link text-dark fw-medium" to="/products">Products</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-dark fw-medium" to="/services">Services</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-dark fw-medium" to="/contact">Contact</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link text-dark fw-medium" to="/register">Register</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-dark fw-medium" to="/login">Login</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

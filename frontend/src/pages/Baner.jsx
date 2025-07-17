@@ -1,114 +1,35 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import image_1 from "/public/images-1.jpg";
-import image_2 from "/public/images-2.jpg";
+import React from 'react';
+
 
 const BannerPage = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1200 });
-  }, []);
+  const images = [
+    { src: 'coffee-mugs.webp', alt: 'Personalized Metal Photo Frames & Custom Nameplates' },
+    { src: 'fridge-magnets.jpg', alt: 'Customized Coffee Mugs, Keychains & Tea Coasters for Every Occasion' },
+    { src: 'keychain.webp', alt: 'Unique and Personalized Gifts: Metal Frames, Mugs, and More' },
+  ];
 
   return (
-    <div className="bg-light py-5">
-      <div className="container">
-        <div
-          id="bannerCarousel"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner">
-            {/* Slide 1 */}
-            <div className="carousel-item active">
-              <div className="row align-items-center">
-                <div className="col-md-6" data-aos="fade-right">
-                  <h1 className="display-4 fw-bold text-primary mb-4">
-                    Welcome to <span className="text-dark">Your Brand</span>
-                  </h1>
-                  <p className="lead text-secondary mb-4">
-                    Discover high-quality products at unbeatable prices. We bring your vision to life.
-                  </p>
-                  <a href="#shop" className="btn btn-primary btn-lg px-4 py-2">
-                    Shop Now
-                  </a>
-                </div>
-                <div className="col-md-6 text-center" data-aos="fade-left">
-                  <img
-                    src={image_1}
-                    alt="Slide 1"
-                    className="img-fluid rounded shadow-lg"
-                  />
-                </div>
+    <div className="container-fluid p-0 m-0">
+      <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" >
+        <div className="carousel-inner">
+          {images.map((image, index) => (
+            <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+              <img className="d-block w-100" src={image.src} alt={image.alt} style={{ height: '85vh', objectFit: 'cover' }} />
+              <div className="carousel-caption d-none d-md-block">
+                <h3 className='text-info'>{image.alt}</h3>
+                <p className='text-warning fw-bold'>Celebrate life’s precious moments with our elegant personalized metal photo frames. Perfect for home décor, office spaces, or as a thoughtful gift. {image.alt}</p>
               </div>
             </div>
-
-            {/* Slide 2 */}
-            <div className="carousel-item">
-              <div className="row align-items-center">
-                <div className="col-md-6" data-aos="fade-right">
-                  <h1 className="display-4 fw-bold text-success mb-4">
-                    Premium Quality <span className="text-dark">Products</span>
-                  </h1>
-                  <p className="lead text-secondary mb-4">
-                    Shop our latest collection of premium items that define excellence and value.
-                  </p>
-                  <a href="#shop" className="btn btn-success btn-lg px-4 py-2">
-                    Explore
-                  </a>
-                </div>
-                <div className="col-md-6 text-center" data-aos="fade-left">
-                  <img
-                    src={image_2}
-                    alt="Slide 2"
-                    className="img-fluid rounded shadow-lg"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Slide 3 */}
-            <div className="carousel-item">
-              <div className="row align-items-center">
-                <div className="col-md-6" data-aos="fade-right">
-                  <h1 className="display-4 fw-bold text-danger mb-4">
-                    Fast & Reliable <span className="text-dark">Shipping</span>
-                  </h1>
-                  <p className="lead text-secondary mb-4">
-                    Get your orders delivered swiftly and safely to your doorstep.
-                  </p>
-                  <a href="#shop" className="btn btn-danger btn-lg px-4 py-2">
-                    Order Now
-                  </a>
-                </div>
-                <div className="col-md-6 text-center" data-aos="fade-left">
-                  <img
-                    src={image_1}
-                    alt="Slide 3"
-                    className="img-fluid rounded shadow-lg"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Controls */}
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#bannerCarousel"
-            data-bs-slide="prev"
-          >
-            <span className="carousel-control-prev-icon"></span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#bannerCarousel"
-            data-bs-slide="next"
-          >
-            <span className="carousel-control-next-icon"></span>
-          </button>
+          ))}
         </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
   );

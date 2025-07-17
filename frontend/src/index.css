@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -77,7 +77,7 @@
   font-size: 1rem;
 }
 
-/* About us secrions  */
+/* About us sections  */
 img {
   transition: transform 0.5s ease;
 }
@@ -89,15 +89,79 @@ img:hover {
 
 /* For background image */
 .background-section {
-  background-image: url('/images-1.jpg'); /* Replace with your image path */
+  background-image: url('/images-1.jpg');
+  /* Replace with your image path */
   background-size: cover;
   background-position: center;
-  height: 50vh; /* Full screen height */
+  height: 50vh;
+  /* Full screen height */
   position: relative;
 }
 
 .overlay-content {
-  background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Optional dark overlay */
   border-radius: 12px;
 }
 
+
+/* This is for background image for about us  */
+.background-image {
+  background-image: url('/img1.webp');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+}
+
+.overlay-content {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  max-width: 600px;
+}
+
+/* This is for contact */
+.background-image-contact {
+  background-image: url('/img2.webp');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+}
+
+.overlay-content-contact {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  max-width: 600px;
+}
+
+/* THis is for product */
+.background-image-product {
+  background-image: url('/img2.webp');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+}
+
+.overlay-content-product {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  max-width: 600px;
+}
+
+/* This is for services */
+
+.background-image-services {
+  background-image: url('/img-3.webp');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+}
+
+.overlay-content-services {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  max-width: 600px;
+}

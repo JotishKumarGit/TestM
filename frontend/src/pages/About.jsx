@@ -15,7 +15,15 @@ const About = () => {
     return (
         <>
             <div className="container-fluid">
-                <BackgroundImage />
+                {/* <BackgroundImage /> */}
+                <div className="background-image d-flex align-items-center justify-content-center text-white text-center">
+                    <div className="overlay-content p-4 rounded">
+                        <h2 className="display-5 fw-bold">Handcrafted for Your Everyday Moments</h2>
+                        <div className="lead">
+                            We believe that everyday items should tell a story.
+                        </div>
+                    </div>
+                </div>
 
                 <div className="container py-5">
                     {/* About Section */}
